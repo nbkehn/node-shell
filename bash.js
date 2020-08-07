@@ -9,6 +9,8 @@ process.stdin.on('data', (data) => {
     if (arr.length>1){    //for inputs greater than one word
         if (arr[0]==='cat'){
             require('./cat')(arr[1]);
+        } else if(arr[0] === 'curl'){
+            require('./curl')(arr[1]);
         }
     } else {    //for one word inputs
         if (cmd === "pwd"){
