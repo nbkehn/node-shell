@@ -17,6 +17,8 @@ process.stdin.on('data', (data) => {
             require('./pwd')(done);
         } else if(cmd === 'ls'){
             require('./ls')(done);
+        } else if(cmd === 'date'){
+            require('./date')(done);
         }
     }
 });
