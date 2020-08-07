@@ -1,8 +1,7 @@
 const request = require('request');
-const curl = function(url){
+const curl = function(url, func){
     request(url, function(error, response, body){
-        process.stdout.write(body);
-        process.stdout.write('\nprompt > ');
+        func(body);
     });
 }
 
